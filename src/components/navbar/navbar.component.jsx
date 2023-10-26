@@ -1,12 +1,65 @@
-import { Outlet,NavLink } from 'react-router-dom'
+import { Icon, InlineIcon } from "@iconify/react"
+
+import { ReactComponent as Furniro } from "../../assets/SkinClinic.svg"
+import { ReactComponent as FurniroLogo } from "../../assets/logo.svg"
+
+import { Outlet,NavLink, Link } from 'react-router-dom'
+
+import { Fragment } from 'react'
 
 import './navbar.styles.css'
 
 export default function Navbar() {
   return (
-    <div>
-    navbar.component
-    <Outlet />
-    </div>
+    <Fragment>
+    <header>
+      <div className='navbar-container'>
+        <NavLink to="/">
+          <div className="logo-container">
+            <div className="left-logo"><FurniroLogo className="logo" /></div>
+            <div className="right-logo"><Furniro className="logo-word" /></div>
+          </div>
+        </NavLink>
+          <nav>
+            <NavLink exact 
+            to="/"
+            activeClassName="active"
+            className="navlink">Home</NavLink>
+            <NavLink 
+            to="shop"
+            className="navlink" >Shop</NavLink>
+            <NavLink 
+            to="about"
+            className="navlink" >About</NavLink>
+            <NavLink 
+            to="contact"
+            className="navlink" >Contact</NavLink>
+          </nav>
+          <ul className="header-icons-container">
+            <li>
+              
+                <InlineIcon style={{fontSize: '24px', cursor: 'pointer'}} icon="mdi:account-alert-outline" />
+              
+            </li>
+            <li>
+              
+                <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:search" /> 
+              
+            </li>
+            <li>
+              
+                <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:heart" />
+              
+            </li>
+            <li>
+              
+                <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="ant-design:shopping-cart-outlined" onClick={{}} />
+    
+            </li>
+          </ul>
+      </div>
+      </header>
+      <Outlet />
+    </Fragment>
   )
 }
