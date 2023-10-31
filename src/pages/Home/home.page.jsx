@@ -21,9 +21,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <main>
-
-      </main> */}
+      <main>
+        <section>
+          <h2>Browse The Range</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section></section>
+      </main>
     </div>
   )
 }
