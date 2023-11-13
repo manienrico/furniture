@@ -8,6 +8,7 @@ import { Outlet,NavLink, Link } from 'react-router-dom'
 import { Fragment } from 'react'
 
 import './navbar.styles.css'
+import { middleNav } from "../components"
 
 export default function Navbar() {
   return (
@@ -21,7 +22,19 @@ export default function Navbar() {
           </div>
         </NavLink>
           <nav>
-            <NavLink exact 
+          <ul>
+          {
+            middleNav.map(item=>{
+              return(
+                <li key={item.id}>
+                  <NavLink to={item.path} className={item.cName}>{item.title}</NavLink>
+                </li>
+              )
+            })
+          }
+          </ul>
+          
+            {/* <NavLink exact 
             to="/"
             activeClassName="active"
             className="navlink">Home</NavLink>
@@ -33,9 +46,9 @@ export default function Navbar() {
             className="navlink" >About</NavLink>
             <NavLink 
             to="contact"
-            className="navlink" >Contact</NavLink>
+            className="navlink" >Contact</NavLink> */}
           </nav>
-          <ul className="header-icons-container">
+          {/* <ul className="header-icons-container">
             <li>
               
                 <InlineIcon style={{fontSize: '24px', cursor: 'pointer'}} icon="mdi:account-alert-outline" />
@@ -56,7 +69,7 @@ export default function Navbar() {
                 <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="ant-design:shopping-cart-outlined" onClick={{}} />
     
             </li>
-          </ul>
+          </ul> */}
       </div>
       </header>
       <Outlet />
