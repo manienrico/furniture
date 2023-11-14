@@ -7,22 +7,21 @@ import { Outlet,NavLink, Link } from 'react-router-dom'
 
 import { Fragment } from 'react'
 
-import './navbar.styles.css'
 import { middleNav } from "../components"
+
+import './navbar.styles.css'
 
 export default function Navbar() {
   return (
     <Fragment>
     <header>
-      <div className='navbar-container'>
-        <NavLink to="/">
-          <div className="logo-container">
-            <div className="left-logo"><FurniroLogo className="logo" /></div>
-            <div className="right-logo"><Furniro className="logo-word" /></div>
-          </div>
+      <nav>
+        <NavLink to="/" className="logo-container">
+            <FurniroLogo className="logo" />
+            <Furniro className="logo-word" />
         </NavLink>
-          <nav>
-          <ul>
+          
+          <ul className="mid-nav">
           {
             middleNav.map(item=>{
               return(
@@ -33,6 +32,12 @@ export default function Navbar() {
             })
           }
           </ul>
+          <section className="nav-icons">
+            <InlineIcon style={{fontSize: '24px', cursor: 'pointer'}} icon="mdi:account-alert-outline" />
+            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:search" /> 
+            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:heart" />
+            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="ant-design:shopping-cart-outlined" onClick={{}} />
+          </section>
           
             {/* <NavLink exact 
             to="/"
@@ -47,7 +52,7 @@ export default function Navbar() {
             <NavLink 
             to="contact"
             className="navlink" >Contact</NavLink> */}
-          </nav>
+      </nav>
           {/* <ul className="header-icons-container">
             <li>
               
@@ -70,7 +75,6 @@ export default function Navbar() {
     
             </li>
           </ul> */}
-      </div>
       </header>
       <Outlet />
     </Fragment>

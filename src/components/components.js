@@ -34,3 +34,12 @@ export const middleNav =[
     //     cName: "navlink",
     // },
 ]
+
+export const rightNav=[
+    {
+        id: "1",
+        title:"Home",
+        path: "/home",
+        cName: "navlink",
+    },
+]
