@@ -1,13 +1,9 @@
 import HomeBg from "../../assets/bg.svg"
-import { Button, HeroSection } from "../../components/components"
+import { Button } from "../components"
 
-import './home.styles.css'
-
-export default function Home() {
+export default function Hero() {
   return (
-    <div className="home-container">
-      <HeroSection />
-      {/* <div className="hero-container">
+        <div className="hero-container">
         <div className="bg-container">
           <img src={HomeBg} alt="scandinavian-interior-mockup-wall-decal-background"/>
         </div>
@@ -21,16 +17,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div> */}
-      <section className="">
-        <div className="browse-range-head">
-          <h2>Browse The Range</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div>
-
-        </div>
-      </section>
-    </div>
+      </div>
   )
 }
