@@ -2,6 +2,6 @@ import './about.styles.css'
 
 export default function About() {
   return (
-    <div>about.page</div>
+    <div>About</div>
   )
 }

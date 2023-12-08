@@ -32,12 +32,20 @@ export default function Navbar() {
             })
           }
           </ul>
-          <section className="nav-icons">
-            <InlineIcon style={{fontSize: '24px', cursor: 'pointer'}} icon="mdi:account-alert-outline" />
-            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:search" /> 
-            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="akar-icons:heart" />
-            <InlineIcon style={{fontSize:'24px', cursor: 'pointer'}} icon="ant-design:shopping-cart-outlined" onClick={{}} />
-          </section>
+          <ul className="nav-icons">
+            <li>
+              <InlineIcon style={{fontSize: '24px', cursor: 'pointer', padding: 2, }} icon="mdi:account-alert-outline" />
+            </li>
+            <li>
+              <InlineIcon style={{fontSize:'24px', cursor: 'pointer', padding: 2, }} icon="akar-icons:search" /> 
+            </li>
+            <li>
+              <InlineIcon style={{fontSize:'24px', cursor: 'pointer', padding: 2, }} icon="akar-icons:heart" />
+            </li>
+            <li>
+              <InlineIcon style={{fontSize:'24px', cursor: 'pointer', padding: 2, }} icon="ant-design:shopping-cart-outlined" onClick={{}} />
+            </li>
+          </ul>
           
             {/* <NavLink exact 
             to="/"
