@@ -15,7 +15,7 @@ export default function Home() {
             <h5>New Arrival</h5>
             <h1>Discover Our<br/> New Collection</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div className="">
+            <div className="inner-btn">
               <Button>BUY NOW</Button>
             </div>
           </div>
